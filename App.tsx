@@ -5,12 +5,21 @@ import axios from 'axios';
 export default function App() {
 
   
+
   const getData = async()=>{
     const apiUrl = 'http://10.0.2.2:5104'
-    const response = await axios.get(apiUrl+"/WeatherForecast");
+    const response = await axios.get(apiUrl+"/weatherforecast/GetTestData");
     console.log(response.data);
   }
+
+  const postData = async()=>{
+    const apiUrl = 'http://10.0.2.2:5104'
+    const response = await axios.post(apiUrl+"/weatherforecast/UpdateTestaData",{testID:1, testName:"from mobile"});
+    console.log(response.data);
+  }
+  
   getData();
+  postData();
 
   return (
     <View style={styles.container}>

@@ -14,7 +14,7 @@ export default function App() {
 
   const postData = async()=>{
     const apiUrl = 'http://10.0.2.2:5104'
-    const response = await axios.post(apiUrl+"/weatherforecast/UpdateTestaData",{testID:1, testName:"from mobile"});
+    const response = await axios.post(apiUrl+"/weatherforecast/UpdateTestData",{testID:1, testName:"from mobile"});
     console.log(response.data);
   }
   
@@ -23,7 +23,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Call Sample Data!</Text>
       <StatusBar style="auto" />
     </View>
   );
